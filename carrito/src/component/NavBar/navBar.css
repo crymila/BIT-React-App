@@ -1,0 +1,75 @@
+.navContenedor {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.navIzq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navIzq img {
+    width: 10rem;
+}
+
+.navIzq .navbar {
+    display: flex;
+    font-size: 1.5rem;
+    gap: 1rem;
+    color: #333;
+}
+
+.navIzq .navbar a {
+    padding: 0.5rem 0.8rem;
+    text-decoration: none;
+    color: #333;
+}
+
+.navIzq .navbar a:hover,
+.navIzq .navbar a:focus {
+    color: white;
+    background-color: #333;
+    border-radius: 20px;
+}
+
+.navDer {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.2rem 1.5rem;
+}
+
+.navDer button,
+.navDer .btnCarrito {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    color: #333;
+    padding: 0.5rem 0.8rem;
+}
+
+.navDer button:hover,
+.navDer .btnCarrito:hover,
+.navDer button:focus,
+.navDer .btnCarrito:focus {
+    color: white;
+    background-color: #333;
+    border-radius: 20px;
+}
+
+.navDer svg {
+
+    width: 2rem;
+    height: 2rem;
+}
+
+.navDer .login {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
