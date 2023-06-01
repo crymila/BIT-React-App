@@ -3,10 +3,21 @@ import { dataContext } from "../Context/dataContext";
 import './productos.css'
 
 import React from 'react'
+import { loginContext } from "../Context/loginContext";
 
 const ProductosHogar = () => {
     const { dataHogar, comprarProducto } = useContext(dataContext);
+   
+    const { usuario,cambiarEstado } = useContext(loginContext);
+    function validarUsuario(producto){
+        if (usuario.activo==false){
+            alert("Debe iniciar sesion.")
+        }else{
+            comprarProducto(producto) 
 
+        }
+
+    }
 
     return dataHogar.map((producto) => {
         return (
@@ -14,7 +25,7 @@ const ProductosHogar = () => {
                 <img src={producto.img} alt="imagen" />
                 <h3>{producto.name}</h3>
                 <h4>{producto.price}$</h4>
-                <button onClick={() => comprarProducto(producto)}>Agregar</button>
+                <button onClick={() => validarUsuario(producto)}>Agregar</button>
             </div>
         );
     });
