@@ -22,6 +22,7 @@ const ProductosHogar = () => {
     return dataHogar.map((producto) => {
         return (
             <div className="card" key={producto.id}>
+             
                 <img src={producto.img} alt="imagen" />
                 <h3>{producto.name}</h3>
                 <h4>{producto.price}$</h4>

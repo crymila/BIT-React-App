@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import NavBar from '../navBar/navBar';
 import { useContext } from "react";
 import { loginContext } from "../Context/loginContext";
+import { useNavigate } from "react-router-dom";
 import "./LoginUsuario.css"
 
 const LoginUsuario = () => {
@@ -10,6 +11,8 @@ const LoginUsuario = () => {
   const [contraseña, setContraseña] = useState("");
 
   const { usuario,cambiarEstado } = useContext(loginContext);
+
+  const navegate = useNavigate();
 
   function capturar() {
     fetch("https://6477fdae362560649a2d1ba2.mockapi.io/users")
@@ -27,7 +30,7 @@ const LoginUsuario = () => {
       })
       
       console.log(usuario)
-      window.location.href="/"  
+     navegate("/")
     } else {
       alert("Usuario o contraseña incorrectos.")
     }
